@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inscription_connexion/Welcome/components/body.dart';
+import 'package:flutter_inscription_connexion/Screens/Welcome/components/body.dart';
 
 class WelcomScreen extends StatelessWidget {
   @override

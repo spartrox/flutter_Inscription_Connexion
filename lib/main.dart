@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inscription_connexion/constants.dart';
-import 'package:flutter_inscription_connexion/Welcome/welcome_screen.dart';
+import 'package:flutter_inscription_connexion/Screens/Welcome/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
