@@ -16,15 +16,15 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "BIENVENUE,",
+              "Bienvenue,",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: 30),
+                  fontSize: 28),
             ),
             SizedBox(
                 height:
-                    size.height * 0.03), // Espacement du titre et des boutons
+                    size.height * 0.02), // Espacement du titre et des boutons
             RoundedButton(
                 text: "CONNEXION",
                 color: PrimaryColor,

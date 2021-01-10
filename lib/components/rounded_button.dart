@@ -18,7 +18,7 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10), // espace entre les boutons
+      margin: EdgeInsets.symmetric(vertical: 6), // espace entre les boutons
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
