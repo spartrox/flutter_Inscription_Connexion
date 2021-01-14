@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart'; //Import flutter
 import 'package:flutter_inscription_connexion/constants.dart'; //Import couleur
 
-class RoundedButton extends StatelessWidget {
+class RoundedLogin extends StatelessWidget {
   final String text;
   final Function press;
   final Color color, textColor;
 
-  const RoundedButton({
+  const RoundedLogin({
     Key key,
     this.text,
     this.press,
-    this.color = PrimaryColor,
-    this.textColor = Colors.white,
+    this.color = PrimaryWhite,
+    this.textColor = PrimaryColorLogin,
   }) : super(key: key);
 
   @override
@@ -25,11 +25,7 @@ class RoundedButton extends StatelessWidget {
           Container(
             width: size.width * 0.5,
             decoration: new BoxDecoration(
-              // bordure bouton
-              border: new Border.all(
-                color: Colors.white,
-                width: 0.8,
-              ),
+              color: Colors.white,
               borderRadius: new BorderRadius.circular(15.0),
             ),
             child: ClipRRect(
@@ -39,7 +35,10 @@ class RoundedButton extends StatelessWidget {
                 onPressed: press,
                 child: Text(
                   text,
-                  style: TextStyle(color: textColor),
+                  style: TextStyle(
+                      color: textColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
                 ),
               ),
             ),

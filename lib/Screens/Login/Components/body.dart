@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inscription_connexion/components/background.dart';
 import 'package:flutter_inscription_connexion/components/rounded_button.dart';
-import 'package:flutter_inscription_connexion/constants.dart';
-import 'package:flutter_inscription_connexion/Screens/Login/login_screen.dart';
+import 'package:flutter_inscription_connexion/components/rounded_input.dart';
+import 'package:flutter_inscription_connexion/components/rounded_login.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -25,21 +25,19 @@ class Body extends StatelessWidget {
             SizedBox(
                 height:
                     size.height * 0.03), // Espacement du titre et des boutons
-            RoundedButton(
-                text: "Connexion",
-                color: PrimaryColor,
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen(); // Redirige vers la fonction de la page login_screen.dart
-                      },
-                    ),
-                  );
-                }),
-            RoundedButton(
-                text: "Mot de passe", color: PrimaryColor, press: () {}),
+            RoundedInputField(
+              hintText: "Votre email",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Votre mot de passe",
+              onChanged: (value) {},
+            ),
+            RoundedLogin(
+              text: "LOGIN",
+              color: Colors.red, //A MODIFIER
+              press: () {},
+            ),
           ],
         ),
       ),
