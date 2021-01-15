@@ -1,15 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_inscription_connexion/constants.dart';
+import 'package:flutter/material.dart'; //Import flutter
+import 'package:flutter_inscription_connexion/constants.dart'; //Import couleur
 import 'package:flutter_inscription_connexion/components/text_field_container.dart';
 
-class RoundedInputField extends StatelessWidget {
-  final String hintText; //Text à l'intérieur du bouton
-  final IconData icon; //Icone
+class RoundedPassword extends StatelessWidget {
   final ValueChanged<String> onChanged;
-  const RoundedInputField({
+
+  const RoundedPassword({
     Key key,
-    this.hintText,
-    this.icon = Icons.person,
     this.onChanged,
   }) : super(key: key);
 
@@ -17,16 +14,21 @@ class RoundedInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
+        obscureText: true,
         onChanged: onChanged,
-        cursorColor: Colors.white,
+        cursorColor: PrimaryWhite,
         decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: Colors.white,
-          ),
-          hintText: hintText,
+          hintText: "Votre mot de passe",
           hintStyle: TextStyle(
               color: Colors.white, fontSize: 19), // Changer la couleur du texte
+          icon: Icon(
+            Icons.lock,
+            color: PrimaryWhite,
+          ),
+          suffixIcon: Icon(
+            Icons.visibility,
+            color: PrimaryWhite,
+          ),
           border: InputBorder.none,
         ),
       ),

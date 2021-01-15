@@ -11,7 +11,7 @@ class RoundedLogin extends StatelessWidget {
     this.text,
     this.press,
     this.color = PrimaryWhite,
-    this.textColor = PrimaryColorLogin,
+    this.textColor = PrimaryColorBlue,
   }) : super(key: key);
 
   @override

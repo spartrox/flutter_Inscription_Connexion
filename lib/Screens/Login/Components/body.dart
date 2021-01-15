@@ -3,6 +3,7 @@ import 'package:flutter_inscription_connexion/components/background.dart';
 import 'package:flutter_inscription_connexion/components/rounded_button.dart';
 import 'package:flutter_inscription_connexion/components/rounded_input.dart';
 import 'package:flutter_inscription_connexion/components/rounded_login.dart';
+import 'package:flutter_inscription_connexion/components/already_have_an_account.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -15,6 +16,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: size.height * 0.13),
             Text(
               "Veuillez vous identifier,",
               style: TextStyle(
@@ -24,7 +26,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(
                 height:
-                    size.height * 0.03), // Espacement du titre et des boutons
+                    size.height * 0.01), // Espacement du titre et des boutons
             RoundedInputField(
               hintText: "Votre email",
               onChanged: (value) {},
@@ -33,11 +35,18 @@ class Body extends StatelessWidget {
               hintText: "Votre mot de passe",
               onChanged: (value) {},
             ),
+            RoundedInputField(
+              hintText: "Votre numéro résident",
+              onChanged: (value) {},
+            ),
+            SizedBox(height: size.height * 0.01),
             RoundedLogin(
               text: "LOGIN",
               color: Colors.red, //A MODIFIER
               press: () {},
             ),
+            SizedBox(height: size.height * 0.02),
+            AlreadyHaveAnAccountCheck(),
           ],
         ),
       ),
