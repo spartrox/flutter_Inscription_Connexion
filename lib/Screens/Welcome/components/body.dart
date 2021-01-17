@@ -3,6 +3,7 @@ import 'package:flutter_inscription_connexion/components/background.dart';
 import 'package:flutter_inscription_connexion/components/rounded_button.dart';
 import 'package:flutter_inscription_connexion/constants.dart';
 import 'package:flutter_inscription_connexion/Screens/Login/login_screen.dart';
+import 'package:flutter_inscription_connexion/Screens/Signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -39,7 +40,18 @@ class Body extends StatelessWidget {
                   );
                 }),
             RoundedButton(
-                text: "INSCRIPTION", color: PrimaryColor, press: () {}),
+                text: "INSCRIPTION",
+                color: PrimaryColor,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SignupScreen();
+                      },
+                    ),
+                  ); // Redirige vers la fonction de la page signup_screen.dart
+                }),
           ],
         ),
       ),

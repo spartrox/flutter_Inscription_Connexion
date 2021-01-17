@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inscription_connexion/components/background.dart';
-import 'package:flutter_inscription_connexion/components/rounded_button.dart';
 import 'package:flutter_inscription_connexion/components/rounded_input.dart';
+import 'package:flutter_inscription_connexion/components/rounded_password.dart';
 import 'package:flutter_inscription_connexion/components/rounded_login.dart';
 import 'package:flutter_inscription_connexion/components/already_have_an_account.dart';
+import 'package:flutter_inscription_connexion/Screens/Signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -31,22 +32,29 @@ class Body extends StatelessWidget {
               hintText: "Votre email",
               onChanged: (value) {},
             ),
-            RoundedInputField(
-              hintText: "Votre mot de passe",
-              onChanged: (value) {},
-            ),
-            RoundedInputField(
-              hintText: "Votre numéro résident",
+            RoundedPassword(
               onChanged: (value) {},
             ),
             SizedBox(height: size.height * 0.01),
             RoundedLogin(
-              text: "LOGIN",
+              text: "Se connecter",
               color: Colors.red, //A MODIFIER
               press: () {},
             ),
             SizedBox(height: size.height * 0.02),
-            AlreadyHaveAnAccountCheck(),
+            AlreadyHaveAnAccountCheck(
+              login: true,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignupScreen();
+                    },
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
