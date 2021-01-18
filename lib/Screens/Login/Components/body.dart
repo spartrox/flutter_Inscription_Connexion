@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
           children: [
             SizedBox(height: size.height * 0.13),
             Text(
-              "Veuillez vous identifier,",
+              "Veuillez vous identifierr,",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
