@@ -9,27 +9,24 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height,
-      width: double.infinity,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/fond.png"), fit: BoxFit.cover)),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Positioned(
-            top: 110,
-            left: 80,
-            child: Image.asset(
-              "assets/images/logo.png",
-              fit: BoxFit.cover,
-            ),
+    //Size size = MediaQuery.of(context).size;
+    return Stack(
+      children: [
+        Positioned(
+          top: 0,
+          child: Image.asset(
+            "assets/images/fond.png",
+            fit: BoxFit.cover,
           ),
-          child,
-        ],
-      ),
+        ),
+        Center(
+          child: ListView(
+            children: [
+              child,
+            ],
+          ),
+        )
+      ],
     );
   }
 }

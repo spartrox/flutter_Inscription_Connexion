@@ -6,6 +6,8 @@ import 'package:flutter_inscription_connexion/components/rounded_password.dart';
 import 'package:flutter_inscription_connexion/components/rounded_login.dart';
 import 'package:flutter_inscription_connexion/components/already_have_an_account.dart';
 import 'package:flutter_inscription_connexion/Screens/Signup/signup_screen.dart';
+import 'package:flutter_inscription_connexion/Screens/FullJobs/fullJobs_screen.dart';
+import 'package:flutter_inscription_connexion/constants.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,7 +20,10 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: size.height * 0.13),
+            SizedBox(height: size.height * 0.20),
+            Image.asset(
+              "assets/images/logo.png",
+            ),
             Text(
               "Veuillez vous identifier,",
               style: TextStyle(
@@ -37,6 +42,11 @@ class Body extends StatelessWidget {
               onChanged: (value) {},
             ),
             SizedBox(height: size.height * 0.01),
+            Image.asset(
+              "assets/images/footPrintt.png",
+              height: 80,
+            ),
+
             RoundedLogin(
               text: "Se connecter",
               press: () {
@@ -44,13 +54,21 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignupScreen();
+                      return FullJobsScreen();
                     },
                   ),
                 );
               },
             ),
-            SizedBox(height: size.height * 0.02),
+            SizedBox(height: size.height * 0.01),
+            FlatButton(
+              child: Text(
+                "Mot de passe oublié ?",
+                style: TextStyle(color: PrimaryColorBlue),
+              ),
+              onPressed: () {},
+            ),
+            SizedBox(height: size.height * 0.01),
             AlreadyHaveAnAccountCheck(
               login: true,
               press: () {

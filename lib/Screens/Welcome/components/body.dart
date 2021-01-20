@@ -16,6 +16,10 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: size.height * 0.29),
+            Image.asset(
+              "assets/images/logo.png",
+            ),
             Text(
               "Bienvenue,",
               style: TextStyle(
