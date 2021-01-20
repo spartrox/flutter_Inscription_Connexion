@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: size.height * 0.13),
+            SizedBox(height: size.height * 0.15),
             Text(
               "Veuillez vous inscrire,",
               style: TextStyle(

@@ -23,7 +23,7 @@ class RoundedButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: size.width * 0.5,
+            width: size.width * 0.6,
             decoration: new BoxDecoration(
               // bordure bouton
               border: new Border.all(

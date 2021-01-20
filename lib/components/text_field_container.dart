@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inscription_connexion/constants.dart';
 
 class TextFieldContainer extends StatelessWidget {
   final Widget child;

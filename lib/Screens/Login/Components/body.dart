@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: 25),
+                  fontSize: 24),
             ),
             SizedBox(
                 height:
@@ -38,8 +38,16 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.01),
             RoundedLogin(
               text: "Se connecter",
-              color: Colors.red, //A MODIFIER
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignupScreen();
+                    },
+                  ),
+                );
+              },
             ),
             SizedBox(height: size.height * 0.02),
             AlreadyHaveAnAccountCheck(

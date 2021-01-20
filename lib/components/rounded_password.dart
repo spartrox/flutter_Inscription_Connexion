@@ -20,15 +20,15 @@ class RoundedPassword extends StatelessWidget {
         decoration: InputDecoration(
           hintText: "Votre mot de passe",
           hintStyle: TextStyle(
-              color: Colors.white, fontSize: 19), // Changer la couleur du texte
+              color: Colors.white, fontSize: 15), // Changer la couleur du texte
           icon: Icon(
             Icons.lock,
             color: PrimaryWhite,
           ),
-          suffixIcon: Icon(
+          /*suffixIcon: Icon(
             Icons.visibility,
             color: PrimaryWhite,
-          ),
+          ),*/
           border: InputBorder.none,
         ),
       ),

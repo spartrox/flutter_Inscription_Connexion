@@ -24,6 +24,7 @@ class Background extends StatelessWidget {
             left: 80,
             child: Image.asset(
               "assets/images/logo.png",
+              fit: BoxFit.cover,
             ),
           ),
           child,

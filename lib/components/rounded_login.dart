@@ -23,7 +23,7 @@ class RoundedLogin extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: size.width * 0.5,
+            width: size.width * 0.7,
             decoration: new BoxDecoration(
               color: Colors.white,
               borderRadius: new BorderRadius.circular(15.0),
