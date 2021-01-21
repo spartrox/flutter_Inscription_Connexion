@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_inscription_connexion/Screens/GaleryResidents/components/body.dart';
 import 'package:flutter_inscription_connexion/components/plan.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -93,6 +92,26 @@ class DetailsPage extends StatelessWidget {
               )
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.indigo,
+          items: [
+            BottomNavigationBarItem(
+              // ignore: deprecated_member_use
+              title: Text("Calendrier", style: TextStyle(color: Colors.white)),
+              icon: Icon(Icons.calendar_today, color: Colors.white),
+            ),
+            BottomNavigationBarItem(
+              // ignore: deprecated_member_use
+              title: Text("Accueil", style: TextStyle(color: Colors.white)),
+              icon: Icon(Icons.home, color: Colors.white),
+            ),
+            BottomNavigationBarItem(
+              // ignore: deprecated_member_use
+              title: Text("Contact", style: TextStyle(color: Colors.white)),
+              icon: Icon(Icons.phone, color: Colors.white),
+            )
+          ],
         ),
       ),
     );

@@ -11,11 +11,13 @@ class Plan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
-    return Container(
-      child: Container(
-          child: PhotoView(
-        imageProvider: AssetImage("assets/images/plan.png"),
-      )),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: new Container(
+              child: PhotoView(
+            imageProvider: AssetImage("assets/images/plan.png"),
+          )),
+        ));
   }
 }

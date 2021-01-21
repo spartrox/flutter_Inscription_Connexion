@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_inscription_connexion/Screens/GaleryResidents/components/details_page.dart';
-import 'package:flutter_inscription_connexion/constants.dart';
 
 //-------------------------- LISTE DETAILS PHOTOS ---------------------------------
 List<ImageDetails> _images = [
