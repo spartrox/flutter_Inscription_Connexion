@@ -3,14 +3,14 @@ import 'package:flutter_inscription_connexion/constants.dart'; //Import couleur
 
 class RoundedFullJobs extends StatelessWidget {
   final String text;
-  final String image;
+  //final String image;
   final Function press;
   final Color color, textColor;
 
   const RoundedFullJobs({
     Key key,
     this.text,
-    this.image,
+    //this.image,
     this.press,
     this.color = PrimaryWhite,
     this.textColor = PrimaryColorBlue,

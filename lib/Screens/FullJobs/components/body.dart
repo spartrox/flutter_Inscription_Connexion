@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_inscription_connexion/components/background.dart';
 import 'package:flutter_inscription_connexion/components/rounded_fullJobs.dart';
+import 'package:flutter_inscription_connexion/Screens/GaleryResidents/galery_residents_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -15,14 +16,11 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: size.height * 0.05),
-            Container(
-              child: RoundedFullJobs(
-                text: "Direction",
-                press: () {},
-              ),
+            RoundedFullJobs(
+              text: "Direction",
+              press: () {},
             ),
             RoundedFullJobs(
-              image: "assets/icons/direction.PNG",
               text: "Secrétaire",
               press: () {},
             ),
@@ -32,11 +30,29 @@ class Body extends StatelessWidget {
             ),
             RoundedFullJobs(
               text: "Infirmière",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return GaleryResidentsScreen();
+                    },
+                  ),
+                );
+              },
             ),
             RoundedFullJobs(
               text: "Aide soignante",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return GaleryResidentsScreen();
+                    },
+                  ),
+                );
+              },
             ),
             RoundedFullJobs(
               text: "Animateur",
